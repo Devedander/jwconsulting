@@ -50,7 +50,7 @@ function HeroSection() {
       }}
     >
       {/* Decorative orbit — desktop only */}
-      <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 pointer-events-none select-none">
+      <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none select-none">
         <OrbitDiagram />
       </div>
 
@@ -86,7 +86,7 @@ function HeroSection() {
             style={{ color: 'var(--warm-gray)', maxWidth: '34rem' }}
           >
             Concierge IT support for small businesses and individuals —
-            delivered with patience, plain English, and a personal touch you
+            delivered with patience, clear, jargon-free language, and a personal touch you
             won&apos;t find anywhere else.
           </p>
 
@@ -292,9 +292,9 @@ function ServicesSection() {
             </h3>
             <p className="leading-relaxed mb-8" style={{ color: 'var(--warm-gray)' }}>
               Technology should work <em>for</em> you, not frustrate you. I
-              specialize in helping people who aren&apos;t &ldquo;tech people&rdquo; — especially
-              seniors and those who just need someone patient, friendly, and
-              able to explain things in plain English without judgment.
+              specialize in helping people who aren&apos;t &ldquo;tech people&rdquo; —
+              people who just need someone patient, friendly, and
+              able to explain things clearly, without judgment.
             </p>
             <ul className="space-y-3 mb-10 flex-1">
               {[
@@ -319,7 +319,7 @@ function ServicesSection() {
                 Hourly Rate
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="font-display font-bold" style={{ fontSize: '2.6rem', color: 'var(--navy)' }}>$240</span>
+                <span className="font-display font-bold" style={{ fontSize: '2.6rem', color: 'var(--navy)' }}>$300</span>
                 <span className="text-sm" style={{ color: 'var(--warm-gray)' }}>/hour · billed per hour</span>
               </div>
               <div className="text-xs mt-1" style={{ color: 'var(--warm-gray-light)' }}>No hidden fees · No subscription required</div>
@@ -376,7 +376,7 @@ function ApproachSection() {
               style={{ color: 'rgba(255,255,255,0.65)', maxWidth: '28rem' }}
             >
               I started in tech because I love solving problems — but I stayed
-              because I love helping people. From seniors learning a new laptop
+              because I love helping people. From family members getting new devices
               to small business owners who just need their computers to work,
               every client gets the same thing: honest, patient, personal service.
             </p>
@@ -469,10 +469,10 @@ function PricingSection() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <span className="section-label">Pricing</span>
-          <h2 className="section-title">Simple, Transparent Rates</h2>
+          <h2 className="section-title">Simple, Honest Pricing</h2>
           <p className="section-subtitle mx-auto">
-            No confusing tiers, no surprise bills. You always know exactly what
-            you&apos;re paying — and what you&apos;re getting.
+            Straightforward hourly rates for individuals. Business clients,
+            reach out for a custom quote.
           </p>
         </div>
 
@@ -490,14 +490,14 @@ function PricingSection() {
                 <span className="font-semibold text-sm" style={{ color: 'var(--navy)' }}>Small Business</span>
               </div>
               <div className="flex items-baseline gap-1 mb-1">
-                <span className="font-display font-bold" style={{ fontSize: '3rem', color: 'var(--navy)', lineHeight: 1 }}>$120</span>
-                <span className="text-sm" style={{ color: 'var(--warm-gray)' }}>/seat/month</span>
+                <span className="font-display font-bold" style={{ fontSize: '3rem', color: 'var(--navy)', lineHeight: 1 }}>Get a quote</span>
+                <span className="text-sm" style={{ color: 'var(--warm-gray)' }}></span>
               </div>
               <p className="text-xs mt-2 mb-5" style={{ color: 'var(--warm-gray-light)' }}>
-                Minimum 2 seats ($240/month to start)
+                Pricing tailored to your business size
               </p>
               <div className="rounded-lg p-3 text-sm" style={{ background: 'var(--amber-pale)', color: 'var(--amber)', fontWeight: 600 }}>
-                Flat monthly fee — no per-incident charges
+                Contact us for a custom quote
               </div>
             </div>
             <div className="px-8 pb-6 flex-1">
@@ -537,7 +537,7 @@ function PricingSection() {
                 <span className="font-semibold text-sm text-white/80">Individual / Home</span>
               </div>
               <div className="flex items-baseline gap-1 mb-1">
-                <span className="font-display font-bold text-white" style={{ fontSize: '3rem', lineHeight: 1 }}>$240</span>
+                <span className="font-display font-bold text-white" style={{ fontSize: '3rem', lineHeight: 1 }}>$300</span>
                 <span className="text-sm text-white/60">/hour</span>
               </div>
               <p className="text-xs mt-2 mb-5 text-white/40">
@@ -553,7 +553,7 @@ function PricingSection() {
                   'One-time or ongoing help, your choice',
                   'Remote or on-site visits',
                   'Patient, jargon-free explanations',
-                  'Seniors and non-tech users welcome',
+                  'All skill levels welcome',
                   'Cell phones, smart home & more',
                   'No appointment too small',
                 ].map((f) => (
@@ -666,12 +666,12 @@ function ContactSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
-            href="tel:+12025550187"
+            href="tel:+17078748324"
             className="btn-primary"
             style={{ background: 'var(--amber)', color: 'var(--navy)', fontSize: '1.05rem', padding: '1rem 2.5rem' }}
           >
             <Phone size={18} />
-            (202) 555-0187
+            (707) 874-8324
           </a>
           <a
             href="mailto:john@johnwangcs.com"
@@ -685,7 +685,7 @@ function ContactSection() {
 
         <div className="inline-flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
           <MapPin size={14} />
-          Serving the greater Washington D.C. metro area
+          Serving Sonoma County and surrounding areas
         </div>
       </div>
     </section>
