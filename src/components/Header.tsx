@@ -10,7 +10,7 @@ export function Header() {
       style={{ background: 'var(--navy)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
       className="sticky top-0 z-50"
     >
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-hbetween">
+      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 no-underline" onClick={() => setOpen(false)}>
           <div
