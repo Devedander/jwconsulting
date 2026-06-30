@@ -17,7 +17,7 @@ const faqs = [
     category: 'Services',
     question: 'What does "concierge IT support" mean for individuals?',
     answer:
-      "Concierge support means you get personalized, patient, one-on-one help — I come to you, explain everything in plain English, and don't rush you. It's ideal for people who aren't tech-savvy, seniors learning a new device, or anyone who's been frustrated by impersonal tech support in the past. No call centers, no hold music, no jargon.",
+      "Concierge support means you get personalized, patient, one-on-one help — I come to you, explain everything in clear, jargon-free language, and don't rush you. It's ideal for people who aren't tech-savvy, seniors learning a new device, or anyone who's been frustrated by impersonal tech support in the past. No call centers, no hold music, no jargon.",
   },
   {
     category: 'Services',
@@ -41,13 +41,13 @@ const faqs = [
     category: 'Pricing',
     question: 'How does the $120/seat/month business pricing work?',
     answer:
-      'The plan is priced per user (seat) at $120 per seat per month, with a minimum of 2 seats. So the starting price is $240/month for a 2-person business. As you add employees, you add seats. This flat fee covers all the support needs for each person on the plan — no nickel-and-diming per call or per visit.',
+      'Business pricing is tailored to your team size and needs. Contact us for a custom quote.',
   },
   {
     category: 'Pricing',
-    question: 'How is the $240/hour individual support billed?',
+    question: 'How is the $300/hour individual support billed?',
     answer:
-      "You're billed in full-hour increments at $240 per hour. There's no subscription or retainer required — you call when you need help, and you pay for the time spent. I'll always give you an estimate upfront so there are no surprises.",
+      "You're billed in full-hour increments at $300 per hour. There's no subscription or retainer required — you call when you need help, and you pay for the time spent. I'll always give you an estimate upfront so there are no surprises.",
   },
   {
     category: 'Getting Started',
@@ -59,13 +59,13 @@ const faqs = [
     category: 'Getting Started',
     question: 'What areas do you serve?',
     answer:
-      'I primarily serve the greater Washington D.C. metro area, including Northern Virginia and suburban Maryland. Remote support is available anywhere, so if you\'re outside the area, feel free to reach out — I can often solve problems without needing to visit in person.',
+      'I primarily serve the greater Sonoma County and surrounding areas. Remote support is available anywhere, so if you\'re outside the area, feel free to reach out — I can often solve problems without needing to visit in person.',
   },
   {
     category: 'Getting Started',
-    question: 'Is this a good fit for seniors or people who are not tech-savvy?',
+    question: 'Is this a good fit for people who aren't very tech-savvy?',
     answer:
-      "Absolutely — this is one of my favorite things about the work I do. I've worked with many seniors and individuals who feel overwhelmed or embarrassed by technology, and I take real pride in making people feel comfortable and capable. There's no such thing as a silly question, and I'll never make you feel bad for not knowing something.",
+      "Absolutely — this is one of my favorite things about the work I do. I've worked with many people who feel overwhelmed or embarrassed by technology, and I take real pride in making people feel comfortable and capable. There's no such thing as a silly question, and I'll never make you feel bad for not knowing something.",
   },
 ]
 
