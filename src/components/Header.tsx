@@ -10,7 +10,7 @@ export function Header() {
       style={{ background: 'var(--navy)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
       className="sticky top-0 z-50"
     >
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-hbetween">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 no-underline" onClick={() => setOpen(false)}>
           <div
@@ -43,9 +43,9 @@ export function Header() {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {[
-            { href: '#services', label: 'Services' },
-            { href: '#pricing', label: 'Pricing' },
-            { href: '#contact', label: 'Contact' },
+            { href: '/#services', label: 'Services' },
+            { href: '/#pricing', label: 'Pricing' },
+            { href: '/#contact', label: 'Contact' },
           ].map(({ href, label }) => (
             <a
               key={label}
@@ -88,9 +88,9 @@ export function Header() {
           className="md:hidden px-6 py-5 flex flex-col gap-4"
         >
           {[
-            { href: '#services', label: 'Services' },
-            { href: '#pricing', label: 'Pricing' },
-            { href: '#contact', label: 'Contact' },
+            { href: '/#services', label: 'Services' },
+            { href: '/#pricing', label: 'Pricing' },
+            { href: '/#contact', label: 'Contact' },
           ].map(({ href, label }) => (
             <a
               key={label}
