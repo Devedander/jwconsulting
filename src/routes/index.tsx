@@ -292,9 +292,9 @@ function ServicesSection() {
             </h3>
             <p className="leading-relaxed mb-8" style={{ color: 'var(--warm-gray)' }}>
               Technology should work <em>for</em> you, not frustrate you. I
-              specialize in helping people who aren&apos;t &ldquo;tech people&rdquo; —
-              people who just need someone patient, friendly, and
-              able to explain things clearly, without judgment.
+              specialize in helping seniors and those who aren&apos;t &ldquo;tech people&rdquo; —
+              especially people who just need someone patient, friendly, and
+              able to explain things in plain English, without judgment.
             </p>
             <ul className="space-y-3 mb-10 flex-1">
               {[
@@ -376,7 +376,7 @@ function ApproachSection() {
               style={{ color: 'rgba(255,255,255,0.65)', maxWidth: '28rem' }}
             >
               I started in tech because I love solving problems — but I stayed
-              because I love helping people. From family members getting new devices
+              because I love helping people. From seniors learning a new laptop
               to small business owners who just need their computers to work,
               every client gets the same thing: honest, patient, personal service.
             </p>
@@ -553,7 +553,7 @@ function PricingSection() {
                   'One-time or ongoing help, your choice',
                   'Remote or on-site visits',
                   'Patient, jargon-free explanations',
-                  'All skill levels welcome',
+                  'Seniors and non-tech users welcome',
                   'Cell phones, smart home & more',
                   'No appointment too small',
                 ].map((f) => (
