@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     category: 'Getting Started',
-    question: 'Is this a good fit for people who aren't very tech-savvy?',
+    question: 'Is this a good fit for people who are not very tech-savvy?',
     answer:
       "Absolutely — this is one of my favorite things about the work I do. I've worked with many people who feel overwhelmed or embarrassed by technology, and I take real pride in making people feel comfortable and capable. There's no such thing as a silly question, and I'll never make you feel bad for not knowing something.",
   },
