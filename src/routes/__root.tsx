@@ -11,7 +11,7 @@ export const Route = createRootRoute({
       {
         name: 'description',
         content:
-          'Concierge IT support for small businesses and individuals. Managed support plans from $120/seat/mo and on-demand help at $240/hr. Windows, Mac, phones, printers, and smart home devices.',
+          'Concierge IT support for small businesses and individuals. Custom managed support plans for businesses — call for a quote — and on-demand help at $240/hr. Windows, Mac, phones, printers, and smart home devices.',
       },
     ],
     links: [

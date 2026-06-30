@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { useState } from 'react'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, Mail } from 'lucide-react'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -61,14 +61,24 @@ export function Header() {
           >
             FAQ
           </Link>
-          <a
-            href="tel:+17078748324"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
-            style={{ background: 'var(--amber)', color: 'var(--navy)' }}
-          >
-            <Phone size={14} />
-            Call Now
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="mailto:john@johnwangcs.com"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
+              style={{ border: '1.5px solid rgba(255,255,255,0.3)', color: 'white' }}
+            >
+              <Mail size={14} />
+              Email
+            </a>
+            <a
+              href="tel:+17078748324"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
+              style={{ background: 'var(--amber)', color: 'var(--navy)' }}
+            >
+              <Phone size={14} />
+              Call Now
+            </a>
+          </div>
         </div>
 
         {/* Mobile hamburger */}
@@ -109,8 +119,16 @@ export function Header() {
             FAQ
           </Link>
           <a
-            href="tel:+17078748324"
+            href="mailto:john@johnwangcs.com"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold w-full justify-center mt-2"
+            style={{ border: '1.5px solid rgba(255,255,255,0.3)', color: 'white' }}
+          >
+            <Mail size={16} />
+            Email
+          </a>
+          <a
+            href="tel:+17078748324"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold w-full justify-center"
             style={{ background: 'var(--amber)', color: 'var(--navy)' }}
           >
             <Phone size={16} />

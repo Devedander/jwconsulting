@@ -214,6 +214,14 @@ function ServicesSection() {
             className="rounded-2xl p-8 md:p-10 flex flex-col"
             style={{ background: 'var(--navy)', color: 'white', boxShadow: 'var(--shadow-lg)' }}
           >
+            <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
+              <img
+                src="/images/john-headshot.jpg"
+                alt="John Wang, owner of John Wang Computer Services"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: '50% 20%' }}
+              />
+            </div>
             <div
               className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
               style={{ background: 'rgba(200,134,30,0.2)' }}
@@ -237,7 +245,7 @@ function ServicesSection() {
               {[
                 'Proactive monitoring & maintenance',
                 'Unlimited support calls & remote help',
-                'Hardware troubleshooting & repairs',
+                'Hardware troubleshooting',
                 'Security updates & virus removal',
                 'Printer, network & peripheral setup',
                 'New device setup & data migration',
@@ -249,15 +257,12 @@ function ServicesSection() {
               ))}
             </ul>
             <div
-              className="rounded-xl p-5 mb-6"
+              className="rounded-xl p-6 mb-6"
               style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
             >
-              <div className="text-white/50 text-xs font-semibold uppercase tracking-widest mb-1">Starting at</div>
-              <div className="flex items-baseline gap-2">
-                <span className="font-display font-bold text-white" style={{ fontSize: '2.6rem' }}>$240</span>
-                <span className="text-white/60 text-sm">/month (2 seats)</span>
-              </div>
-              <div className="text-white/50 text-xs mt-1">$120 per seat/month · min. 2 seats</div>
+              <div className="text-white/50 text-xs font-semibold uppercase tracking-widest mb-1">Pricing</div>
+              <div className="font-display font-bold text-white" style={{ fontSize: '1.9rem' }}>Call for a Quote</div>
+              <div className="text-white/50 text-xs mt-1">Tailored to your business size — no two setups are the same</div>
             </div>
             <a
               href="#pricing"
@@ -274,6 +279,14 @@ function ServicesSection() {
             className="rounded-2xl p-8 md:p-10 flex flex-col"
             style={{ background: 'white', boxShadow: 'var(--shadow-lg)', border: '1.5px solid var(--border)' }}
           >
+            <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
+              <img
+                src="/images/individual-support.jpg"
+                alt="John Wang helping clients with their laptop and phone"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: '50% 35%' }}
+              />
+            </div>
             <div
               className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
               style={{ background: 'var(--amber-pale)' }}
@@ -474,6 +487,12 @@ function PricingSection() {
             Straightforward hourly rates for individuals. Business clients,
             reach out for a custom quote.
           </p>
+          <p className="text-center text-sm mt-2" style={{ color: 'var(--warm-gray-light)' }}>
+            Not sure which option is right for you?{' '}
+            <a href="#contact" style={{ color: 'var(--amber)', fontWeight: 600 }}>
+              Reach out — I&apos;m happy to talk it through.
+            </a>
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -571,13 +590,6 @@ function PricingSection() {
             </div>
           </div>
         </div>
-
-        <p className="text-center text-sm mt-8" style={{ color: 'var(--warm-gray-light)' }}>
-          Not sure which option is right for you?{' '}
-          <a href="#contact" style={{ color: 'var(--amber)', fontWeight: 600 }}>
-            Reach out — I&apos;m happy to talk it through.
-          </a>
-        </p>
       </div>
     </section>
   )

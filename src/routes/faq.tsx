@@ -23,7 +23,7 @@ const faqs = [
     category: 'Services',
     question: 'Do you offer on-site visits or only remote support?',
     answer:
-      'Both. Many issues can be resolved remotely with your permission, which is faster and more convenient. But some problems require hands-on work — a hardware repair, a new printer setup, or helping you learn your new device in person. On-site visits are included for Business plan clients and available for individual clients at the standard hourly rate.',
+      'Both. Many issues can be resolved remotely with your permission, which is faster and more convenient. But some problems require hands-on work — a new printer setup, network equipment installation, or helping you learn your new device in person. On-site visits are included for Business plan clients and available for individual clients at the standard hourly rate.',
   },
   {
     category: 'Devices',
@@ -39,9 +39,9 @@ const faqs = [
   },
   {
     category: 'Pricing',
-    question: 'How does the $120/seat/month business pricing work?',
+    question: 'How does business pricing work?',
     answer:
-      'Business pricing is tailored to your team size and needs. Contact us for a custom quote.',
+      'Business pricing is tailored to your team size and needs — call for a quote.',
   },
   {
     category: 'Pricing',
@@ -66,6 +66,12 @@ const faqs = [
     question: 'Is this a good fit for seniors or people who are not tech-savvy?',
     answer:
       "Absolutely — this is one of my favorite things about the work I do. I've worked with many seniors and individuals who feel overwhelmed or embarrassed by technology, and I take real pride in making people feel comfortable and capable. There's no such thing as a silly question, and I'll never make you feel bad for not knowing something.",
+  },
+  {
+    category: 'Getting Started',
+    question: 'What are your hours?',
+    answer:
+      "I don't keep strict office hours — I stay flexible and do my best to be available whenever my clients need me, including evenings and weekends. Technology problems don't follow a 9-to-5 schedule, so neither do I. Reach out anytime and I'll work with you to find a time that fits.",
   },
 ]
 
