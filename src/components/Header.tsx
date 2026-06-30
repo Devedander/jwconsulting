@@ -62,7 +62,7 @@ export function Header() {
             FAQ
           </Link>
           <a
-            href="tel:+12025550187"
+            href="tel:+17078748324"
             className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
             style={{ background: 'var(--amber)', color: 'var(--navy)' }}
           >

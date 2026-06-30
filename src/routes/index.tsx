@@ -671,7 +671,7 @@ function ContactSection() {
             style={{ background: 'var(--amber)', color: 'var(--navy)', fontSize: '1.05rem', padding: '1rem 2.5rem' }}
           >
             <Phone size={18} />
-            (707) 874-8324
+            (707) 874-TECH (8324)
           </a>
           <a
             href="mailto:john@johnwangcs.com"
@@ -685,7 +685,7 @@ function ContactSection() {
 
         <div className="inline-flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
           <MapPin size={14} />
-          Serving Sonoma County and surrounding areas
+          In-person support in Sonoma County · Remote support available worldwide
         </div>
       </div>
     </section>

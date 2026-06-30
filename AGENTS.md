@@ -70,12 +70,12 @@ All animations use `transform`/`opacity` only — no layout properties.
 
 ## Content & Contact
 
-Placeholder contact details used throughout:
-- Phone: `(202) 555-0187` / `tel:+12025550187`
+Real contact details used throughout:
+- Phone: `(707) 874-TECH (8324)` / `tel:+17078748324`
 - Email: `john@johnwangcs.com`
-- Service area: "greater Washington D.C. metro area"
+- Service area: in-person in Sonoma County, remote support worldwide
 
-These appear in `Header.tsx`, `index.tsx` (ContactSection), and `faq.tsx`. Update all three when real contact info is provided.
+These appear in `Header.tsx`, `index.tsx` (ContactSection), and `faq.tsx`.
 
 ## Key Design Decisions
 

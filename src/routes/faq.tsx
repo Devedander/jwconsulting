@@ -59,7 +59,7 @@ const faqs = [
     category: 'Getting Started',
     question: 'What areas do you serve?',
     answer:
-      'I primarily serve the greater Sonoma County and surrounding areas. Remote support is available anywhere, so if you\'re outside the area, feel free to reach out — I can often solve problems without needing to visit in person.',
+      'I provide in-person support throughout Sonoma County, and remote support anywhere in the world — so no matter where you are, I can usually get you sorted out without needing to visit in person.',
   },
   {
     category: 'Getting Started',
@@ -150,11 +150,11 @@ function FAQPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:+12025550187"
+              href="tel:+17078748324"
               className="btn-primary"
               style={{ background: 'var(--amber)', color: 'var(--navy)' }}
             >
-              (202) 555-0187
+              (707) 874-TECH (8324)
             </a>
             <a
               href="mailto:john@johnwangcs.com"
