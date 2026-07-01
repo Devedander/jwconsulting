@@ -216,7 +216,7 @@ function ServicesSection() {
           >
             <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
               <img
-                src="/images/john-headshot.jpg"
+                src={`${import.meta.env.BASE_URL}images/john-headshot.jpg`}
                 alt="John Wang, owner of John Wang Computer Services"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 20%' }}
@@ -281,7 +281,7 @@ function ServicesSection() {
           >
             <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
               <img
-                src="/images/individual-support.jpg"
+                src={`${import.meta.env.BASE_URL}images/individual-support.jpg`}
                 alt="John Wang helping clients with their laptop and phone"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 35%' }}

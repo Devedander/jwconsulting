@@ -1,0 +1,9 @@
+node_modules
+
+# Local Netlify folder
+.netlify
+
+# Build output
+dist
+.tanstack
+src/routeTree.gen.ts

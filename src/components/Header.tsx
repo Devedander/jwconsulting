@@ -43,9 +43,9 @@ export function Header() {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {[
-            { href: '/#services', label: 'Services' },
-            { href: '/#pricing', label: 'Pricing' },
-            { href: '/#contact', label: 'Contact' },
+            { href: `${import.meta.env.BASE_URL}#services`, label: 'Services' },
+            { href: `${import.meta.env.BASE_URL}#pricing`, label: 'Pricing' },
+            { href: `${import.meta.env.BASE_URL}#contact`, label: 'Contact' },
           ].map(({ href, label }) => (
             <a
               key={label}
@@ -98,9 +98,9 @@ export function Header() {
           className="md:hidden px-6 py-5 flex flex-col gap-4"
         >
           {[
-            { href: '/#services', label: 'Services' },
-            { href: '/#pricing', label: 'Pricing' },
-            { href: '/#contact', label: 'Contact' },
+            { href: `${import.meta.env.BASE_URL}#services`, label: 'Services' },
+            { href: `${import.meta.env.BASE_URL}#pricing`, label: 'Pricing' },
+            { href: `${import.meta.env.BASE_URL}#contact`, label: 'Contact' },
           ].map(({ href, label }) => (
             <a
               key={label}
