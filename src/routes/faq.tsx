@@ -59,7 +59,7 @@ const faqs = [
     category: 'Getting Started',
     question: 'What areas do you serve?',
     answer:
-      'I provide in-person support throughout Sonoma County, and remote support anywhere in the world — so no matter where you are, I can usually get you sorted out without needing to visit in person.',
+      'I provide in-person support throughout Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor, and the surrounding Sonoma County area, and remote support anywhere in the world — so no matter where you are, I can usually get you sorted out without needing to visit in person.',
   },
   {
     category: 'Getting Started',

@@ -73,7 +73,7 @@ All animations use `transform`/`opacity` only — no layout properties.
 Real contact details used throughout:
 - Phone: `(707) 874-TECH (8324)` / `tel:+17078748324`
 - Email: `john@johnwangcs.com`
-- Service area: in-person in Sonoma County, remote support worldwide
+- Service area: in-person in Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & surrounding Sonoma County; remote support worldwide
 
 These appear in `Header.tsx`, `index.tsx` (ContactSection), and `faq.tsx`.
 

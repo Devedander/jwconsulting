@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
+import { useState } from 'react'
 import {
   Monitor,
   Laptop,
@@ -9,6 +10,8 @@ import {
   CheckCircle2,
   Phone,
   ArrowRight,
+  ChevronLeft,
+  ChevronRight,
   Star,
   ShieldCheck,
   Clock,
@@ -600,56 +603,116 @@ function PricingSection() {
 const testimonials = [
   {
     quote:
-      'John came to my house when my laptop stopped working before a big family trip. He was so patient explaining everything in terms I could actually understand. Fixed it in under two hours and made sure I knew how to avoid the problem in the future.',
-    name: 'Eleanor B.',
-    detail: 'Retired Teacher',
+      "I reached out to John at JW Consulting for advice on making my home a smart home. John was able to ask the questions I hadn't thought of and gave me clear and easy to understand options. Once everything was setup and we were living with all of our new smart tech, John was happy to make adjustments so that everything was perfect for us. Super nice guy and easy to talk to. Prices were fair too.",
+    name: 'Anthony Parr',
+    detail: 'Google Review',
     stars: 5,
   },
   {
     quote:
-      "We have 8 employees and were constantly dealing with computer issues that slowed us down. Since switching to John's monthly plan we've had zero downtime. The flat fee was a huge relief — no more surprise bills.",
-    name: 'Marcus & Rosa Delgado',
-    detail: 'Owners, Delgado Landscaping Co.',
+      'JW Consulting Services has been handling our IT work for many years. He does an exceptional job, and available whenever we need help. Very reliable and smooth service. Highly recommend!',
+    name: 'Thomas Darling',
+    detail: 'Google Review',
     stars: 5,
   },
   {
     quote:
-      "Most tech people make me feel stupid for asking basic questions. John is completely the opposite — friendly, patient, and he never makes you feel rushed. I finally feel confident using my new iPhone.",
-    name: 'Linda F.',
-    detail: 'Individual Client',
+      "Definitely knows the ins & outs of computing & all it entails. I feel confident that I'm in excellent hands, which is critical for my business. The important thing for me is his ability to listen to my description of an issue & find answers so quickly! Amazing guy!",
+    name: 'Max DuBois',
+    detail: 'Google Review',
+    stars: 5,
+  },
+  {
+    quote:
+      'Very knowledgeable and savvy advice. John is comfortable with diverse systems like what we have (a mix of Windows desktops and laptops, iPads, iPhones, and Chrome computers). Great support, delivered in a timely manner.',
+    name: "Edward O'Brien",
+    detail: 'Google Review',
+    stars: 5,
+  },
+  {
+    quote:
+      'Everything was handled with care and attention to detail. A+ service all around!',
+    name: 'Jeannine Patterson',
+    detail: 'Google Review',
     stars: 5,
   },
 ]
 
 function TestimonialsSection() {
+  const [start, setStart] = useState(0)
+  const total = testimonials.length
+  const visibleCount = Math.min(4, total)
+  const visible = Array.from({ length: visibleCount }, (_, i) => testimonials[(start + i) % total])
+  const goPrev = () => setStart((i) => (i - 1 + total) % total)
+  const goNext = () => setStart((i) => (i + 1) % total)
+
   return (
     <section className="py-20 px-6" style={{ background: 'var(--cream)' }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
           <span className="section-label">Testimonials</span>
           <h2 className="section-title">What Clients Say</h2>
+          <p className="section-subtitle mx-auto">
+            Real 5-star reviews from Google.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map(({ quote, name, detail, stars }) => (
-            <div
-              key={name}
-              className="rounded-2xl p-7 flex flex-col"
-              style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
-            >
-              <div className="flex gap-0.5 mb-5">
-                {Array.from({ length: stars }).map((_, i) => (
-                  <Star key={i} size={14} fill="var(--amber)" color="var(--amber)" />
-                ))}
+        <div className="flex items-center gap-3 md:gap-4">
+          <button
+            onClick={goPrev}
+            aria-label="Previous review"
+            className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-opacity hover:opacity-70"
+            style={{ background: 'white', border: '1.5px solid var(--border)', color: 'var(--navy)' }}
+          >
+            <ChevronLeft size={18} />
+          </button>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 flex-1">
+            {visible.map(({ quote, name, detail, stars }, i) => (
+              <div
+                key={`${name}-${start}-${i}`}
+                className="rounded-2xl p-6 flex flex-col"
+                style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
+              >
+                <div className="flex gap-0.5 mb-4">
+                  {Array.from({ length: stars }).map((_, j) => (
+                    <Star key={j} size={13} fill="var(--amber)" color="var(--amber)" />
+                  ))}
+                </div>
+                <p className="text-xs leading-relaxed flex-1 mb-5 line-clamp-6" style={{ color: 'var(--warm-gray)' }}>
+                  &ldquo;{quote}&rdquo;
+                </p>
+                <div>
+                  <div className="font-semibold text-sm" style={{ color: 'var(--navy)' }}>{name}</div>
+                  <div className="text-xs mt-0.5" style={{ color: 'var(--warm-gray-light)' }}>{detail}</div>
+                </div>
               </div>
-              <p className="text-sm leading-relaxed flex-1 mb-6" style={{ color: 'var(--warm-gray)' }}>
-                &ldquo;{quote}&rdquo;
-              </p>
-              <div>
-                <div className="font-semibold text-sm" style={{ color: 'var(--navy)' }}>{name}</div>
-                <div className="text-xs mt-0.5" style={{ color: 'var(--warm-gray-light)' }}>{detail}</div>
-              </div>
-            </div>
+            ))}
+          </div>
+
+          <button
+            onClick={goNext}
+            aria-label="Next review"
+            className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-opacity hover:opacity-70"
+            style={{ background: 'white', border: '1.5px solid var(--border)', color: 'var(--navy)' }}
+          >
+            <ChevronRight size={18} />
+          </button>
+        </div>
+
+        <div className="flex justify-center gap-2 mt-8">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setStart(i)}
+              aria-label={`Go to review ${i + 1}`}
+              className="rounded-full transition-all"
+              style={{
+                width: i === start ? '20px' : '8px',
+                height: '8px',
+                background: i === start ? 'var(--amber)' : 'var(--border)',
+              }}
+            />
           ))}
         </div>
       </div>
@@ -697,7 +760,7 @@ function ContactSection() {
 
         <div className="inline-flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
           <MapPin size={14} />
-          In-person support in Sonoma County · Remote support available worldwide
+          In-person support in Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & surrounding Sonoma County · Remote support available worldwide
         </div>
       </div>
     </section>
