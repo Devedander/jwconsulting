@@ -72,11 +72,11 @@ export function Header() {
             </a>
             <a
               href="tel:+17078748324"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-all hover:opacity-90"
               style={{ background: 'var(--amber)', color: 'var(--navy)' }}
             >
               <Phone size={14} />
-              Call Now
+              (707) 874-8324
             </a>
           </div>
         </div>
@@ -132,7 +132,7 @@ export function Header() {
             style={{ background: 'var(--amber)', color: 'var(--navy)' }}
           >
             <Phone size={16} />
-            Call Now
+            (707) 874-TECH (8324)
           </a>
         </div>
       )}
