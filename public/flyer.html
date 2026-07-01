@@ -67,8 +67,8 @@
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700; font-size: 26px; color: white; line-height: 1;
   }
-  .brand-name { font-weight: 700; font-size: 20px; line-height: 1.1; }
-  .brand-sub { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 3px; }
+  .brand-name { font-weight: 700; font-size: 32px; line-height: 1.05; }
+  .brand-sub { font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 2px; }
   .badge-pill {
     background: rgba(200,134,30,0.22);
     color: var(--amber-light);
@@ -237,27 +237,28 @@
   .contact-block { flex: 1; }
   .contact-block h4 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
   }
   .contact-block h4 em { color: var(--amber-light); font-style: normal; }
   .contact-row {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 11.5px;
-    margin-bottom: 5px;
+    gap: 9px;
+    font-size: 13px;
+    margin-bottom: 10px;
     color: rgba(255,255,255,0.85);
   }
+  .contact-row:last-child { margin-bottom: 0; }
   .contact-row b { color: white; font-weight: 700; }
   .icon-dot {
-    width: 18px; height: 18px;
-    border-radius: 5px;
+    width: 22px; height: 22px;
+    border-radius: 6px;
     background: rgba(200,134,30,0.25);
     display: inline-flex; align-items: center; justify-content: center;
     flex-shrink: 0;
-    font-size: 10px;
+    font-size: 12px;
     color: var(--amber-light);
   }
 
@@ -366,8 +367,8 @@
     <div class="contact-block">
       <h4>Ready to stop fighting <em>with your technology?</em></h4>
       <div class="contact-row"><span class="icon-dot">&#9742;</span> <b>(707) 874-TECH&nbsp;(8324)</b></div>
-      <div class="contact-row"><span class="icon-dot">&#9993;</span> john@johnwangcs.com</div>
-      <div class="contact-row"><span class="icon-dot">&#8982;</span> In-person in Santa Rosa, Petaluma & Sonoma County · Remote worldwide</div>
+      <div class="contact-row"><span class="icon-dot">&#9993;</span> <b>john@johnwangcs.com</b></div>
+      <div class="contact-row"><span class="icon-dot">&#8982;</span> <b>In-person in Sonoma County & surrounding regions · Remote worldwide</b></div>
     </div>
     <div class="qr-block">
       <img src="images/qr-website.png" alt="QR code to johnwangcs.com" />
