@@ -7,7 +7,7 @@ type ChatMessage = { role: 'user' | 'assistant'; content: string }
 
 const GREETING: ChatMessage = {
   role: 'assistant',
-  content: "Hi! I'm here to answer quick questions about John's IT support services. What can I help with?",
+  content: "Hi! I'm here to answer quick questions about JW Consulting Services. What can I help with?",
 }
 
 const EMAIL_PATTERN = /[\w.+-]+@[\w-]+\.[\w.-]+/
