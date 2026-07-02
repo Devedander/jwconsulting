@@ -309,7 +309,7 @@ function ServicesSection() {
                 'Unlimited support calls & remote help',
                 'Hardware troubleshooting',
                 'Security updates & virus removal',
-                'Printer, TV & network setup',
+                'Printer, network & peripheral setup',
                 'New device setup & data migration',
               ].map((f) => (
                 <li key={f} className="flex items-start gap-3 text-sm text-white/80">
@@ -377,8 +377,7 @@ function ServicesSection() {
                 'Virus, malware & security cleanup',
                 'Email, printing & Wi-Fi troubleshooting',
                 'iPhone, Android & tablet setup/support',
-                'TV & streaming device setup (Roku, Fire TV, Apple TV)',
-                'Smart home & home automation help',
+                'TV, streaming & smart home setup',
                 'Data backup & recovery',
               ].map((f) => (
                 <li key={f} className="flex items-start gap-3 text-sm" style={{ color: 'var(--warm-gray)' }}>
