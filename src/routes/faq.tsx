@@ -47,7 +47,7 @@ const faqs = [
     category: 'Pricing',
     question: 'How is the $300/hour individual support billed?',
     answer:
-      "You're billed in full-hour increments at $300 per hour. There's no subscription or retainer required — you call when you need help, and you pay for the time spent. I'll always give you an estimate upfront so there are no surprises.",
+      "You're billed at $300/hr in 1-hour increments. There's no subscription or retainer required — you call when you need help, and you pay for the time spent. I'll always give you an estimate upfront so there are no surprises.",
   },
   {
     category: 'Getting Started',

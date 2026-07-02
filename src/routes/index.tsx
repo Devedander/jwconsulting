@@ -337,7 +337,7 @@ function ServicesSection() {
               </div>
               <div className="flex items-baseline gap-2">
                 <span className="font-display font-bold" style={{ fontSize: '2.6rem', color: 'var(--navy)' }}>$300</span>
-                <span className="text-sm" style={{ color: 'var(--warm-gray)' }}>/hour · billed per hour</span>
+                <span className="text-sm" style={{ color: 'var(--warm-gray)' }}>/hour · billed in 1-hour increments</span>
               </div>
               <div className="text-xs mt-1" style={{ color: 'var(--warm-gray-light)' }}>No hidden fees · No subscription required</div>
             </div>
@@ -564,7 +564,7 @@ function PricingSection() {
                 <span className="text-sm text-white/60">/hour</span>
               </div>
               <p className="text-xs mt-2 mb-5 text-white/40">
-                Billed per full hour · No retainer required
+                Billed in 1-hour increments · No retainer required
               </p>
               <div className="rounded-lg p-3 text-sm font-semibold" style={{ background: 'rgba(200,134,30,0.18)', color: 'var(--amber)' }}>
                 Pay only for the time you use
