@@ -53,9 +53,13 @@ function HeroSection() {
           'radial-gradient(ellipse 80% 60% at 70% 50%, #f0ebe0 0%, var(--cream) 60%)',
       }}
     >
-      {/* Decorative orbit — desktop only */}
-      <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none select-none">
-        <OrbitDiagram />
+      {/* Decorative orbit — desktop only. Aligned to the same max-w-6xl/px-6
+          container as the header nav, so its right edge never sits further
+          right than the Call button in the header. */}
+      <div className="hidden lg:block absolute inset-0 max-w-6xl mx-auto px-6 pointer-events-none select-none">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2">
+          <OrbitDiagram />
+        </div>
       </div>
 
       <div className="max-w-6xl mx-auto">
