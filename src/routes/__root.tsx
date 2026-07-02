@@ -6,7 +6,7 @@ export const Route = createRootRoute({
   head: () => {
     const title = 'John Wang Computer Services — Friendly IT Support'
     const description =
-      'Concierge IT support for small businesses and individuals in Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & Sonoma County. Flat-fee managed support plans for businesses, and on-demand help at $300/hr for individuals. Windows, Mac, phones, printers, and smart home devices.'
+      'Friendly, patient tech support for viruses, hacked email, slow computers, Wi-Fi problems, and more — serving Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & Sonoma County. Flat-fee managed IT for small businesses, and on-demand help at $300/hr for individuals and seniors.'
     const url = 'https://johnwangcs.com/'
     const image = 'https://johnwangcs.com/images/john-headshot.jpg'
     return {

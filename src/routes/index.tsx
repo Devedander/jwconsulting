@@ -50,6 +50,20 @@ export const Route = createFileRoute('/')({
             reviewCount: '5',
           },
           sameAs: ['https://g.page/r/CfK20x2HSjKyEBM/review'],
+          makesOffer: [
+            'Virus & Malware Removal',
+            'Computer Speed & Performance Repair',
+            'Email & Online Account Security Help',
+            'Wi-Fi & Network Troubleshooting',
+            'Smart Home & Device Setup',
+            'Data Backup & Recovery',
+            'Senior & Beginner-Friendly Tech Support',
+            'New Computer & Device Setup',
+            'Small Business Managed IT Support',
+          ].map((name) => ({
+            '@type': 'Offer',
+            itemOffered: { '@type': 'Service', name },
+          })),
         },
       },
     ],
@@ -321,7 +335,7 @@ function ServicesSection() {
             <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
               <img
                 src={`${import.meta.env.BASE_URL}images/individual-support.jpg`}
-                alt="John Wang helping clients with their laptop and phone"
+                alt="John Wang giving patient, in-person tech support to senior clients on their laptop"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 35%' }}
               />
