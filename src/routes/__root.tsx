@@ -3,31 +3,51 @@ import { Header } from '@/components/Header'
 import '../styles.css'
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'John Wang Computer Services — Friendly IT Support' },
-      {
-        name: 'description',
-        content:
-          'Concierge IT support for small businesses and individuals. Custom managed support plans for businesses — call for a quote — and on-demand help at $240/hr. Windows, Mac, phones, printers, and smart home devices.',
-      },
-    ],
-    links: [
-      { rel: 'icon', href: `${import.meta.env.BASE_URL}favicon.ico` },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossOrigin: 'anonymous',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap',
-      },
-    ],
-  }),
+  head: () => {
+    const title = 'John Wang Computer Services — Friendly IT Support'
+    const description =
+      'Concierge IT support for small businesses and individuals in Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & Sonoma County. Flat-fee managed support plans for businesses, and on-demand help at $300/hr for individuals. Windows, Mac, phones, printers, and smart home devices.'
+    const url = 'https://johnwangcs.com/'
+    const image = 'https://johnwangcs.com/images/john-headshot.jpg'
+    return {
+      meta: [
+        { charSet: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { title },
+        { name: 'description', content: description },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'John Wang Computer Services' },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:url', content: url },
+        { property: 'og:image', content: image },
+        { property: 'og:locale', content: 'en_US' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: image },
+      ],
+      links: [
+        { rel: 'icon', href: `${import.meta.env.BASE_URL}favicon.ico` },
+        // Canonical is intentionally NOT set here — TanStack Router
+        // concatenates `links` from parent and child routes rather than
+        // deduping by `rel` (unlike `meta`, which dedupes by name/property),
+        // so a root-level canonical would produce two conflicting
+        // <link rel="canonical"> tags on every child route. Each route sets
+        // its own canonical instead.
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossOrigin: 'anonymous',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap',
+        },
+      ],
+    }
+  },
   shellComponent: RootDocument,
 })
 

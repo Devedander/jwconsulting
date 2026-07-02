@@ -3,6 +3,36 @@ import { useState } from 'react'
 import { ChevronDown, ArrowLeft } from 'lucide-react'
 
 export const Route = createFileRoute('/faq')({
+  head: () => {
+    const title = 'Frequently Asked Questions — John Wang Computer Services'
+    const description =
+      'Answers to common questions about business managed IT support, concierge tech help for individuals and seniors, pricing, devices supported, and service areas in Sonoma County.'
+    const url = 'https://johnwangcs.com/faq'
+    return {
+      meta: [
+        { title },
+        { name: 'description', content: description },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:url', content: url },
+        {
+          'script:ld+json': {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: f.answer,
+              },
+            })),
+          },
+        },
+      ],
+      links: [{ rel: 'canonical', href: url }],
+    }
+  },
   component: FAQPage,
 })
 

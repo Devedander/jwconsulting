@@ -24,6 +24,37 @@ import {
 } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      {
+        'script:ld+json': {
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: 'John Wang Computer Services',
+          image: 'https://johnwangcs.com/images/john-headshot.jpg',
+          url: 'https://johnwangcs.com/',
+          telephone: '+17078748324',
+          email: 'john@johnwangcs.com',
+          priceRange: '$$',
+          areaServed: [
+            { '@type': 'City', name: 'Santa Rosa' },
+            { '@type': 'City', name: 'Petaluma' },
+            { '@type': 'City', name: 'Sebastopol' },
+            { '@type': 'City', name: 'Healdsburg' },
+            { '@type': 'City', name: 'Windsor' },
+            { '@type': 'AdministrativeArea', name: 'Sonoma County' },
+          ],
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '5.0',
+            reviewCount: '5',
+          },
+          sameAs: ['https://g.page/r/CfK20x2HSjKyEBM/review'],
+        },
+      },
+    ],
+    links: [{ rel: 'canonical', href: 'https://johnwangcs.com/' }],
+  }),
   component: HomePage,
 })
 
