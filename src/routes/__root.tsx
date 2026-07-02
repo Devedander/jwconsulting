@@ -1,5 +1,6 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { Header } from '@/components/Header'
+import { ChatWidget } from '@/components/ChatWidget'
 import '../styles.css'
 
 export const Route = createRootRoute({
@@ -60,6 +61,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <Header />
         {children}
+        <ChatWidget />
         <Scripts />
       </body>
     </html>

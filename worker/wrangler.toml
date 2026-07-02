@@ -1,0 +1,11 @@
+name = "jwcs-chatbot"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "jwcs-chatbot-logs"
+database_id = "d572afa2-2bbe-41df-b425-0793ee0cd3d6"
