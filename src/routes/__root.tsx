@@ -4,9 +4,9 @@ import '../styles.css'
 
 export const Route = createRootRoute({
   head: () => {
-    const title = 'John Wang Computer Services — Friendly IT Support'
+    const title = 'John Wang Computer Services - Friendly IT Support'
     const description =
-      'Friendly, patient tech support for viruses, hacked email, slow computers, Wi-Fi problems, and more — serving Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & Sonoma County. Flat-fee managed IT for small businesses, and on-demand help at $300/hr for individuals and seniors.'
+      'Friendly, patient tech support for viruses, hacked email, slow computers, Wi-Fi problems, and more - serving Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & Sonoma County. Flat-fee managed IT for small businesses, and on-demand help at $300/hr for individuals and seniors.'
     const url = 'https://johnwangcs.com/'
     const image = 'https://johnwangcs.com/images/john-headshot.jpg'
     return {
@@ -29,7 +29,7 @@ export const Route = createRootRoute({
       ],
       links: [
         { rel: 'icon', href: `${import.meta.env.BASE_URL}favicon.ico` },
-        // Canonical is intentionally NOT set here — TanStack Router
+        // Canonical is intentionally NOT set here - TanStack Router
         // concatenates `links` from parent and child routes rather than
         // deduping by `rel` (unlike `meta`, which dedupes by name/property),
         // so a root-level canonical would produce two conflicting

@@ -6,6 +6,7 @@ import {
   Laptop,
   Smartphone,
   Printer,
+  Tv,
   Wifi,
   Home as HomeIcon,
   CheckCircle2,
@@ -21,7 +22,14 @@ import {
   Building2,
   Mail,
   MapPin,
+  ExternalLink,
 } from 'lucide-react'
+
+// TODO(review): using the g.page shortlink without the /review suffix, which
+// should land on the Google Business Profile listing itself (showing all
+// existing reviews) rather than the write-a-review flow used on /reviews.
+// Confirm this is the right URL, or swap in the real "view profile" link.
+const GOOGLE_PROFILE_URL = 'https://g.page/r/CfK20x2HSjKyEBM'
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -55,6 +63,7 @@ export const Route = createFileRoute('/')({
             'Computer Speed & Performance Repair',
             'Email & Online Account Security Help',
             'Wi-Fi & Network Troubleshooting',
+            'TV & Streaming Device Setup',
             'Smart Home & Device Setup',
             'Data Backup & Recovery',
             'Senior & Beginner-Friendly Tech Support',
@@ -98,7 +107,7 @@ function HeroSection() {
           'radial-gradient(ellipse 80% 60% at 70% 50%, #f0ebe0 0%, var(--cream) 60%)',
       }}
     >
-      {/* Decorative orbit — desktop only. Aligned to the same max-w-6xl/px-6
+      {/* Decorative orbit - desktop only. Aligned to the same max-w-6xl/px-6
           container as the header nav, so its right edge never sits further
           right than the Call button in the header. */}
       <div className="hidden lg:block absolute inset-0 max-w-6xl mx-auto px-6 pointer-events-none select-none">
@@ -138,7 +147,7 @@ function HeroSection() {
             className="text-lg md:text-xl leading-relaxed mb-10 animate-fade-in-up delay-200"
             style={{ color: 'var(--warm-gray)', maxWidth: '34rem' }}
           >
-            Concierge IT support for small businesses and individuals —
+            Concierge IT support for small businesses and individuals -
             delivered with patience, clear, jargon-free language, and a personal touch you
             won&apos;t find anywhere else.
           </p>
@@ -182,7 +191,7 @@ function OrbitDiagram() {
     { Icon: Monitor,    label: 'Windows PC', color: 'var(--navy)' },
     { Icon: Laptop,     label: 'Mac',        color: 'var(--navy-light)' },
     { Icon: Smartphone, label: 'Mobile',     color: 'var(--amber)' },
-    { Icon: Printer,    label: 'Printer',    color: 'var(--navy)' },
+    { Icon: Tv,         label: 'TV',         color: 'var(--navy)' },
     { Icon: Wifi,       label: 'Network',    color: 'var(--amber)' },
     { Icon: HomeIcon,   label: 'Smart Home', color: 'var(--navy-light)' },
   ]
@@ -264,7 +273,7 @@ function ServicesSection() {
           {/* Business panel */}
           <div
             id="business"
-            className="rounded-2xl p-8 md:p-10 flex flex-col"
+            className="rounded-2xl p-8 md:p-10 flex flex-col order-2 md:order-1"
             style={{ background: 'var(--navy)', color: 'white', boxShadow: 'var(--shadow-lg)' }}
           >
             <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
@@ -290,7 +299,7 @@ function ServicesSection() {
             </h3>
             <p className="leading-relaxed mb-8 text-white/75">
               Stop worrying about tech problems eating into your workday. For a
-              predictable flat monthly fee, I handle everything — from keeping
+              predictable flat monthly fee, I handle everything - from keeping
               your computers running smoothly to being there when something goes
               wrong. One call, one person, no runaround.
             </p>
@@ -300,7 +309,7 @@ function ServicesSection() {
                 'Unlimited support calls & remote help',
                 'Hardware troubleshooting',
                 'Security updates & virus removal',
-                'Printer, network & peripheral setup',
+                'Printer, TV & network setup',
                 'New device setup & data migration',
               ].map((f) => (
                 <li key={f} className="flex items-start gap-3 text-sm text-white/80">
@@ -315,7 +324,7 @@ function ServicesSection() {
             >
               <div className="text-white/50 text-xs font-semibold uppercase tracking-widest mb-1">Pricing</div>
               <div className="font-display font-bold text-white" style={{ fontSize: '1.9rem' }}>Call for a Quote</div>
-              <div className="text-white/50 text-xs mt-1">Tailored to your business size — no two setups are the same</div>
+              <div className="text-white/50 text-xs mt-1">Tailored to your business size - no two setups are the same</div>
             </div>
             <a
               href="#pricing"
@@ -329,7 +338,7 @@ function ServicesSection() {
           {/* Individual panel */}
           <div
             id="individual"
-            className="rounded-2xl p-8 md:p-10 flex flex-col"
+            className="rounded-2xl p-8 md:p-10 flex flex-col order-1 md:order-2"
             style={{ background: 'white', boxShadow: 'var(--shadow-lg)', border: '1.5px solid var(--border)' }}
           >
             <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
@@ -358,7 +367,7 @@ function ServicesSection() {
             </h3>
             <p className="leading-relaxed mb-8" style={{ color: 'var(--warm-gray)' }}>
               Technology should work <em>for</em> you, not frustrate you. I
-              specialize in helping seniors and those who aren&apos;t &ldquo;tech people&rdquo; —
+              specialize in helping seniors and those who aren&apos;t &ldquo;tech people&rdquo; -
               especially people who just need someone patient, friendly, and
               able to explain things in plain English, without judgment.
             </p>
@@ -368,6 +377,7 @@ function ServicesSection() {
                 'Virus, malware & security cleanup',
                 'Email, printing & Wi-Fi troubleshooting',
                 'iPhone, Android & tablet setup/support',
+                'TV & streaming device setup (Roku, Fire TV, Apple TV)',
                 'Smart home & home automation help',
                 'Data backup & recovery',
               ].map((f) => (
@@ -407,12 +417,12 @@ function ApproachSection() {
     {
       Icon: Users,
       title: 'A People Person, Not Just a Tech Person',
-      body: 'Most IT pros speak in jargon and make you feel like the problem. I genuinely enjoy explaining things clearly and making sure you feel confident — not rushed or talked down to.',
+      body: 'Most IT pros speak in jargon and make you feel like the problem. I genuinely enjoy explaining things clearly and making sure you feel confident - not rushed or talked down to.',
     },
     {
       Icon: ShieldCheck,
       title: 'One Person, Full Accountability',
-      body: 'When you call, you reach me — not a help desk queue. I know your setup, I remember your history, and I take ownership of every issue until it\'s fully resolved.',
+      body: 'When you call, you reach me - not a help desk queue. I know your setup, I remember your history, and I take ownership of every issue until it\'s fully resolved.',
     },
     {
       Icon: Clock,
@@ -441,7 +451,7 @@ function ApproachSection() {
               className="leading-relaxed text-base"
               style={{ color: 'rgba(255,255,255,0.65)', maxWidth: '28rem' }}
             >
-              I started in tech because I love solving problems — but I stayed
+              I started in tech because I love solving problems - but I stayed
               because I love helping people. From seniors learning a new laptop
               to small business owners who just need their computers to work,
               every client gets the same thing: honest, patient, personal service.
@@ -482,12 +492,12 @@ function ApproachSection() {
 
 function DevicesSection() {
   const devices = [
-    { Icon: Monitor,    label: 'Windows PCs',     note: 'Primary specialty' },
-    { Icon: Laptop,     label: 'Mac Computers',   note: 'MacBook & iMac' },
-    { Icon: Smartphone, label: 'Cell Phones',      note: 'iPhone & Android' },
-    { Icon: Printer,    label: 'Printers',         note: 'Setup & repairs' },
+    { Icon: Monitor,    label: 'Windows & Mac',    note: 'Desktops & laptops' },
+    { Icon: Smartphone, label: 'Phones & Tablets', note: 'iPhone, Android & iPad' },
+    { Icon: Printer,    label: 'Printers',         note: 'Setup & configuration' },
+    { Icon: Tv,         label: 'TVs & Streaming',  note: 'Smart TVs, Roku, Fire TV & more' },
     { Icon: Wifi,       label: 'Home Networks',    note: 'Wi-Fi & routers' },
-    { Icon: HomeIcon,   label: 'Smart Home & IoT', note: 'Nest, Ring & more' },
+    { Icon: HomeIcon,   label: 'Smart Home & IoT', note: 'Alexa, Google Nest & Ring' },
   ]
 
   return (
@@ -496,7 +506,7 @@ function DevicesSection() {
         <span className="section-label">Coverage</span>
         <h2 className="section-title mx-auto">What I Work On</h2>
         <p className="section-subtitle mx-auto mb-14">
-          From the computer on your desk to the thermostat on your wall — if
+          From the computer on your desk to the thermostat on your wall - if
           it&apos;s connected and it&apos;s giving you trouble, chances are I can fix it.
         </p>
 
@@ -543,7 +553,7 @@ function PricingSection() {
           <p className="text-center text-sm mt-2" style={{ color: 'var(--warm-gray-light)' }}>
             Not sure which option is right for you?{' '}
             <a href="#contact" style={{ color: 'var(--amber)', fontWeight: 600 }}>
-              Reach out — I&apos;m happy to talk it through.
+              Reach out - I&apos;m happy to talk it through.
             </a>
           </p>
         </div>
@@ -580,7 +590,7 @@ function PricingSection() {
                   'On-site visits as needed',
                   'Hardware setup & configuration',
                   'Virus & security protection',
-                  'Dedicated point of contact — call me directly',
+                  'Dedicated point of contact - call me directly',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm" style={{ color: 'var(--warm-gray)' }}>
                     <CheckCircle2 size={15} color="var(--amber)" className="mt-0.5 flex-shrink-0" />
@@ -690,11 +700,18 @@ const testimonials = [
 
 function TestimonialsSection() {
   const [start, setStart] = useState(0)
+  const [expanded, setExpanded] = useState<Set<string>>(new Set())
   const total = testimonials.length
   const visibleCount = Math.min(4, total)
   const visible = Array.from({ length: visibleCount }, (_, i) => testimonials[(start + i) % total])
   const goPrev = () => setStart((i) => (i - 1 + total) % total)
   const goNext = () => setStart((i) => (i + 1) % total)
+  const toggleExpanded = (name: string) =>
+    setExpanded((prev) => {
+      const next = new Set(prev)
+      next.has(name) ? next.delete(name) : next.add(name)
+      return next
+    })
 
   return (
     <section className="py-20 px-6" style={{ background: 'var(--cream)' }}>
@@ -718,26 +735,45 @@ function TestimonialsSection() {
           </button>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 flex-1">
-            {visible.map(({ quote, name, detail, stars }, i) => (
-              <div
-                key={`${name}-${start}-${i}`}
-                className="rounded-2xl p-6 flex flex-col"
-                style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
-              >
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: stars }).map((_, j) => (
-                    <Star key={j} size={13} fill="var(--amber)" color="var(--amber)" />
-                  ))}
+            {visible.map(({ quote, name, detail, stars }, i) => {
+              const isExpanded = expanded.has(name)
+              const canTruncate = quote.length > 160
+              return (
+                <div
+                  key={`${name}-${start}-${i}`}
+                  className="rounded-2xl p-6 flex flex-col"
+                  style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
+                >
+                  <div className="flex gap-0.5 mb-4">
+                    {Array.from({ length: stars }).map((_, j) => (
+                      <Star key={j} size={13} fill="var(--amber)" color="var(--amber)" />
+                    ))}
+                  </div>
+                  <p
+                    onClick={() => canTruncate && toggleExpanded(name)}
+                    className={`text-xs leading-relaxed flex-1 mb-2 ${canTruncate ? 'cursor-pointer' : ''} ${
+                      isExpanded ? '' : 'line-clamp-6'
+                    }`}
+                    style={{ color: 'var(--warm-gray)' }}
+                  >
+                    &ldquo;{quote}&rdquo;
+                  </p>
+                  {canTruncate && (
+                    <button
+                      onClick={() => toggleExpanded(name)}
+                      className="text-xs font-semibold text-left mb-3 hover:underline"
+                      style={{ color: 'var(--amber)' }}
+                    >
+                      {isExpanded ? 'Show less' : 'Read more'}
+                    </button>
+                  )}
+                  <div>
+                    <div className="font-semibold text-sm" style={{ color: 'var(--navy)' }}>{name}</div>
+                    <div className="text-xs mt-0.5" style={{ color: 'var(--warm-gray-light)' }}>{detail}</div>
+                  </div>
                 </div>
-                <p className="text-xs leading-relaxed flex-1 mb-5 line-clamp-6" style={{ color: 'var(--warm-gray)' }}>
-                  &ldquo;{quote}&rdquo;
-                </p>
-                <div>
-                  <div className="font-semibold text-sm" style={{ color: 'var(--navy)' }}>{name}</div>
-                  <div className="text-xs mt-0.5" style={{ color: 'var(--warm-gray-light)' }}>{detail}</div>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
 
           <button
@@ -765,6 +801,18 @@ function TestimonialsSection() {
             />
           ))}
         </div>
+
+        <div className="text-center mt-6">
+          <a
+            href={GOOGLE_PROFILE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm hover:underline"
+            style={{ color: 'var(--warm-gray)' }}
+          >
+            View more reviews on Google <ExternalLink size={13} />
+          </a>
+        </div>
       </div>
     </section>
   )
@@ -786,7 +834,7 @@ function ContactSection() {
           <em className="not-italic" style={{ color: 'var(--amber)' }}>with your technology?</em>
         </h2>
         <p className="mb-12 text-lg" style={{ color: 'rgba(255,255,255,0.6)' }}>
-          Call or email — I typically respond within a few hours.
+          Call or email - I typically respond within a few hours.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

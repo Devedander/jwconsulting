@@ -6,7 +6,7 @@ import { SiteFooter } from '@/components/Footer'
 export const Route = createFileRoute('/reviews')({
   head: () => ({
     meta: [
-      { title: 'How Did We Do? — John Wang Computer Services' },
+      { title: 'How Did We Do? - John Wang Computer Services' },
       { name: 'robots', content: 'noindex, nofollow' },
     ],
     links: [{ rel: 'canonical', href: 'https://johnwangcs.com/reviews' }],
@@ -47,7 +47,7 @@ function ReviewsPage() {
           </h1>
           {!(rating > 0 && rating < 5) && (
             <p className="section-subtitle mx-auto mb-10">
-              Your experience matters to me — tap a star to let me know how things went.
+              Your experience matters to me - tap a star to let me know how things went.
             </p>
           )}
 
@@ -61,7 +61,7 @@ function ReviewsPage() {
               </p>
               <p className="text-sm mb-5" style={{ color: 'var(--warm-gray)' }}>
                 I&apos;m sorry your experience wasn&apos;t a 5-star one. Please let me know what
-                happened so I can make it right — every bit of feedback helps me improve.
+                happened so I can make it right - every bit of feedback helps me improve.
               </p>
               <div className="flex justify-center">
                 <a href={mailtoHref} className="btn-outline">

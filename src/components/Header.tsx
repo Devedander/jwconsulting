@@ -81,14 +81,24 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-white p-1"
-          onClick={() => setOpen(!open)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: always-visible Call button + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <a
+            href="tel:+17078748324"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition-all hover:opacity-90"
+            style={{ background: 'var(--amber)', color: 'var(--navy)' }}
+          >
+            <Phone size={14} />
+            Call Now
+          </a>
+          <button
+            className="text-white p-1"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
