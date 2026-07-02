@@ -1,5 +1,8 @@
 node_modules
 
+# Local-only flyer, not part of the site build
+public/flyer.html
+
 # Local Netlify folder
 .netlify
 
