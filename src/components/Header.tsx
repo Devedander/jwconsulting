@@ -29,13 +29,13 @@ export function Header() {
               className="font-semibold leading-none text-white"
               style={{ fontSize: '1rem', fontFamily: "'Source Sans 3', sans-serif" }}
             >
-              John Wang
+              JW Consulting
             </div>
             <div
               className="tracking-widest uppercase text-white/50"
               style={{ fontSize: '0.6rem', marginTop: '2px' }}
             >
-              Computer Services
+              Services
             </div>
           </div>
         </Link>

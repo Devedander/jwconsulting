@@ -6,7 +6,7 @@ import { SiteFooter } from '@/components/Footer'
 export const Route = createFileRoute('/reviews')({
   head: () => ({
     meta: [
-      { title: 'How Did We Do? - John Wang Computer Services' },
+      { title: 'How Did We Do? - JW Consulting Services' },
       { name: 'robots', content: 'noindex, nofollow' },
     ],
     links: [{ rel: 'canonical', href: 'https://johnwangcs.com/reviews' }],

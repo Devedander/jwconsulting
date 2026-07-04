@@ -25,10 +25,8 @@ import {
   ExternalLink,
 } from 'lucide-react'
 
-// TODO(review): using the g.page shortlink without the /review suffix, which
-// should land on the Google Business Profile listing itself (showing all
-// existing reviews) rather than the write-a-review flow used on /reviews.
-// Confirm this is the right URL, or swap in the real "view profile" link.
+// Confirmed correct: this g.page shortlink (no /review suffix) lands on the
+// Google Business Profile listing itself, showing all existing reviews.
 const GOOGLE_PROFILE_URL = 'https://g.page/r/CfK20x2HSjKyEBM'
 
 export const Route = createFileRoute('/')({
@@ -38,7 +36,7 @@ export const Route = createFileRoute('/')({
         'script:ld+json': {
           '@context': 'https://schema.org',
           '@type': 'LocalBusiness',
-          name: 'John Wang Computer Services',
+          name: 'JW Consulting Services',
           image: 'https://johnwangcs.com/images/john-headshot.jpg',
           url: 'https://johnwangcs.com/',
           telephone: '+17078748324',
@@ -279,7 +277,7 @@ function ServicesSection() {
             <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
               <img
                 src={`${import.meta.env.BASE_URL}images/john-headshot.jpg`}
-                alt="John Wang, owner of John Wang Computer Services"
+                alt="John Wang, owner of JW Consulting Services"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 20%' }}
               />
@@ -435,7 +433,7 @@ function ApproachSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-[2fr_3fr] gap-14 items-start">
           <div>
-            <span className="section-label" style={{ color: 'var(--amber)' }}>Why John Wang CS</span>
+            <span className="section-label" style={{ color: 'var(--amber)' }}>Why JW Consulting Services</span>
             <h2
               className="font-display font-bold leading-tight mb-6"
               style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'white' }}

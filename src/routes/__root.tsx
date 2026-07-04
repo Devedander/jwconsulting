@@ -5,9 +5,9 @@ import '../styles.css'
 
 export const Route = createRootRoute({
   head: () => {
-    const title = 'John Wang Computer Services - Friendly IT Support'
+    const title = 'JW Consulting Services - Friendly IT Support'
     const description =
-      'Friendly, patient tech support for viruses, hacked email, slow computers, Wi-Fi problems, and more - serving Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & Sonoma County. Flat-fee managed IT for small businesses, and on-demand help at $300/hr for individuals and seniors.'
+      'Friendly, patient tech support for viruses, hacked email, slow computers, Wi-Fi problems, and more - serving Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor & Sonoma County. Custom-quote managed IT for small businesses, and on-demand help at $300/hr for individuals and seniors.'
     const url = 'https://johnwangcs.com/'
     const image = 'https://johnwangcs.com/images/john-headshot.jpg'
     return {
@@ -17,7 +17,7 @@ export const Route = createRootRoute({
         { title },
         { name: 'description', content: description },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'John Wang Computer Services' },
+        { property: 'og:site_name', content: 'JW Consulting Services' },
         { property: 'og:title', content: title },
         { property: 'og:description', content: description },
         { property: 'og:url', content: url },

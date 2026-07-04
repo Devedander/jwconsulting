@@ -1,13 +1,13 @@
-# John Wang Computer Services
+# JW Consulting Services
 
-A modern marketing website for John Wang Computer Services — a concierge IT support business serving small businesses and individuals in the Washington D.C. metro area.
+A modern marketing website for JW Consulting Services (John Wang) — a concierge IT support business serving small businesses and individuals in Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor, and the rest of Sonoma County, California (remote support available worldwide).
 
 ## About
 
 The site presents two service offerings:
 
-- **Small Business Managed Support** — flat monthly fee ($120/seat/month, min. 2 seats) covering unlimited support, proactive maintenance, and on-site visits
-- **Individual / Concierge IT Support** — hourly at $240/hr for one-time or ongoing help, specializing in seniors and non-tech-savvy users
+- **Small Business Managed Support** — custom monthly quote covering unlimited support, proactive maintenance, and on-site visits
+- **Individual / Concierge IT Support** — hourly at $300/hr for one-time or ongoing help, specializing in seniors and non-tech-savvy users
 
 ## Tech Stack
 
@@ -54,7 +54,8 @@ src/
 
 ## Customization
 
-To update contact info, search for the placeholder phone `(202) 555-0187` and email `john@johnwangcs.com` in:
+Live contact info is `(707) 874-8324` and `john@johnwangcs.com`. To update it, search for those values in:
 - `src/routes/index.tsx`
 - `src/routes/faq.tsx`
+- `src/routes/reviews.tsx`
 - `src/components/Header.tsx`

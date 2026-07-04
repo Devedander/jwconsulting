@@ -4,7 +4,7 @@ import { ChevronDown, ArrowLeft } from 'lucide-react'
 
 export const Route = createFileRoute('/faq')({
   head: () => {
-    const title = 'Frequently Asked Questions - John Wang Computer Services'
+    const title = 'Frequently Asked Questions - JW Consulting Services'
     const description =
       'Answers to common questions about business managed IT support, concierge tech help for individuals and seniors, pricing, devices supported, and service areas in Sonoma County.'
     const url = 'https://johnwangcs.com/faq'

@@ -15,7 +15,7 @@ export function SiteFooter() {
             <span className="font-display font-bold text-white text-sm">JW</span>
           </div>
           <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.5)' }}>
-            John Wang Computer Services
+            JW Consulting Services
           </span>
         </div>
 
@@ -27,7 +27,7 @@ export function SiteFooter() {
         </div>
 
         <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-          &copy; {new Date().getFullYear()} John Wang Computer Services
+          &copy; {new Date().getFullYear()} JW Consulting Services
         </p>
       </div>
     </footer>
