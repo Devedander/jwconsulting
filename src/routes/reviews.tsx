@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { Star, Mail } from 'lucide-react'
 import { SiteFooter } from '@/components/Footer'
@@ -15,6 +15,7 @@ export const Route = createFileRoute('/reviews')({
 })
 
 const GOOGLE_REVIEW_URL = 'https://g.page/r/CfK20x2HSjKyEBM/review'
+const YELP_REVIEW_URL = 'https://www.yelp.com/biz/jw-consulting-services-kenwood-2'
 const FEEDBACK_EMAIL = 'john@johnwangcs.com'
 
 function ReviewsPage() {
@@ -24,9 +25,11 @@ function ReviewsPage() {
   const handleSelect = (stars: number) => {
     setRating(stars)
     if (stars === 5) {
-      setTimeout(() => {
-        window.location.href = GOOGLE_REVIEW_URL
-      }, 500)
+      // Open Google review in a new tab immediately (must happen synchronously
+      // in the click handler so browsers don't treat it as a blocked popup).
+      // This tab stays on /reviews so the Yelp fallback and homepage link
+      // are still visible if the person closes the Google tab.
+      window.open(GOOGLE_REVIEW_URL, '_blank', 'noopener,noreferrer')
     }
   }
 
@@ -110,9 +113,39 @@ function ReviewsPage() {
               <p className="text-sm mb-4" style={{ color: 'var(--warm-gray)' }}>
                 Taking you to Google to share your review&hellip;
               </p>
-              <a href={GOOGLE_REVIEW_URL} className="btn-primary" style={{ background: 'var(--amber)' }}>
-                Continue to Google
+              <a
+                href={GOOGLE_REVIEW_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-opacity hover:opacity-80"
+              >
+                <img
+                  src="/images/google-review-badge.png"
+                  alt="Leave a review on Google"
+                  style={{ width: 200, height: 'auto', margin: '0 auto' }}
+                />
               </a>
+              <p className="text-xs mt-4 mb-2" style={{ color: 'var(--warm-gray)' }}>
+                Don&apos;t have a Google account?
+              </p>
+              <a
+                href={YELP_REVIEW_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-opacity hover:opacity-80"
+              >
+                <img
+                  src="/images/yelp-review-badge.jpg"
+                  alt="Leave a review on Yelp"
+                  style={{ width: 200, height: 'auto', margin: '0 auto' }}
+                />
+              </a>
+              <p className="text-xs mt-4" style={{ color: 'var(--warm-gray)' }}>
+                Or{' '}
+                <Link to="/" style={{ color: 'var(--warm-gray)', textDecoration: 'underline' }}>
+                  click here to go back to jwconsulting.com
+                </Link>
+              </p>
             </div>
           )}
         </div>

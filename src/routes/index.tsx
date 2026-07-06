@@ -85,6 +85,7 @@ function HomePage() {
       <HeroSection />
       <ServicesSection />
       <ApproachSection />
+      <CredentialsSection />
       <DevicesSection />
       <PricingSection />
       <TestimonialsSection />
@@ -478,6 +479,143 @@ function ApproachSection() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Credentials ───────────────────────────────────────────────────────────── */
+
+const certifications = [
+  {
+    title: 'Backend, SQL & DevOps with Python',
+    issuer: 'Nucamp',
+    year: '2022',
+    image: `${import.meta.env.BASE_URL}certificates/nucamp-devops.jpg`,
+    file: `${import.meta.env.BASE_URL}certificates/nucamp-devops.pdf`,
+  },
+  {
+    title: 'Career Essentials in Generative AI',
+    issuer: 'Microsoft & LinkedIn Learning',
+    year: '2026',
+    image: `${import.meta.env.BASE_URL}certificates/microsoft-linkedin-genai.jpg`,
+    file: `${import.meta.env.BASE_URL}certificates/microsoft-linkedin-genai.pdf`,
+  },
+]
+
+const additionalTraining = [
+  'SQL for Data Science - UC Davis',
+  'Nuance PowerScribe 360 Administrator',
+  'GE Centricity',
+  'AI Ethics, Literacy & Responsible AI - Microsoft/LinkedIn Learning',
+]
+
+function CredentialsSection() {
+  return (
+    <section className="py-20 px-6" style={{ background: 'var(--cream-dark)' }}>
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <span className="section-label">Background</span>
+          <h2 className="section-title">Credentials & Leadership</h2>
+          <p className="section-subtitle mx-auto text-center">
+            Two decades in enterprise IT, backed by ongoing training and a
+            track record leading technology for a real organization - not
+            just a stack of certificates.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-[1.1fr_1fr] gap-6 items-stretch">
+          {/* UNASF leadership card */}
+          <div
+            className="rounded-2xl p-8 md:p-10 flex flex-col"
+            style={{ background: 'var(--navy)', color: 'white', boxShadow: 'var(--shadow-lg)' }}
+          >
+            <div
+              className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
+              style={{ background: 'rgba(200,134,30,0.2)' }}
+            >
+              <ShieldCheck size={24} color="var(--amber)" />
+            </div>
+            <span className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: 'var(--amber)' }}>
+              Community Leadership
+            </span>
+            <h3 className="font-display font-bold mb-2" style={{ fontSize: '1.6rem', lineHeight: 1.2 }}>
+              Technology Chairman, UNASF
+            </h3>
+            <p className="text-sm mb-5 text-white/50">
+              United Nations Association of the USA - San Francisco Chapter &middot; May 2024 - Present
+            </p>
+            <p className="leading-relaxed text-white/75 mb-8">
+              Trusted by the Executive Board to set IT security policy and run
+              infrastructure for an organization of 250+ members and 6,000+
+              digital records - the same rigor and accountability I bring to
+              every client&apos;s systems.
+            </p>
+            <ul className="space-y-3 mt-auto">
+              {[
+                'Sets and enforces IT security policy across the chapter',
+                'Manages infrastructure, website & cloud data migration',
+                'Advises the Executive Board on IT strategy',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-white/80">
+                  <CheckCircle2 size={16} color="var(--amber)" className="mt-0.5 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Certifications */}
+          <div className="flex flex-col gap-5">
+            {certifications.map((cert) => (
+              <a
+                key={cert.title}
+                href={cert.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl p-4 flex gap-4 items-center transition-all duration-200 hover:-translate-y-0.5"
+                style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
+              >
+                <div
+                  className="rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center"
+                  style={{ width: 88, height: 68, background: 'var(--cream)' }}
+                >
+                  <img
+                    src={cert.image}
+                    alt={`${cert.title} certificate`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-semibold text-sm" style={{ color: 'var(--navy)' }}>
+                    {cert.title}
+                  </div>
+                  <div className="text-xs mt-0.5" style={{ color: 'var(--warm-gray-light)' }}>
+                    {cert.issuer} &middot; {cert.year}
+                  </div>
+                </div>
+                <ExternalLink size={16} color="var(--warm-gray-light)" className="flex-shrink-0" />
+              </a>
+            ))}
+
+            <div
+              className="rounded-2xl p-6 flex-1"
+              style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
+            >
+              <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--warm-gray-light)' }}>
+                Additional Training
+              </div>
+              <ul className="space-y-3">
+                {additionalTraining.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm" style={{ color: 'var(--warm-gray)' }}>
+                    <CheckCircle2 size={15} color="var(--amber)" className="mt-0.5 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
