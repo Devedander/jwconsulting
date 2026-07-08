@@ -61,6 +61,12 @@ export function Header() {
           >
             FAQ
           </Link>
+          <Link
+            to="/blog"
+            className="text-sm font-medium text-white/70 hover:text-white transition-colors no-underline"
+          >
+            Blog
+          </Link>
           <div className="flex items-center gap-3">
             <a
               href="mailto:john@johnwangcs.com"
@@ -127,6 +133,13 @@ export function Header() {
             onClick={() => setOpen(false)}
           >
             FAQ
+          </Link>
+          <Link
+            to="/blog"
+            className="text-white/80 hover:text-white text-base font-medium no-underline"
+            onClick={() => setOpen(false)}
+          >
+            Blog
           </Link>
           <a
             href="mailto:john@johnwangcs.com"
