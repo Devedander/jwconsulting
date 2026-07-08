@@ -15,7 +15,7 @@ export const sharedServices = [
   'Hacked or locked-out email accounts',
   'New computer, printer, TV & smart home setup',
   'Custom-quote managed IT for small businesses',
-  'On-demand help for individuals & seniors at $300/hr, billed in 1-hour increments',
+  'On-demand help for individuals & seniors at $300/hr',
 ]
 
 export const locations: LocationInfo[] = [

@@ -87,7 +87,7 @@ const seniorFaqs = [
   {
     question: 'How does pricing work?',
     answer:
-      'Individual support is $300/hour, billed in one-hour increments, with no subscription or retainer required. I’ll always give you an honest estimate before starting, so there are no surprises on the bill.',
+      'Individual support is $300/hour, with no subscription or retainer required. I’ll always give you an honest estimate before starting, so there are no surprises on the bill.',
   },
 ]
 
@@ -317,7 +317,7 @@ function PricingSection() {
               <span className="font-display font-bold text-white" style={{ fontSize: '3.5rem', lineHeight: 1 }}>$300</span>
               <span className="text-base text-white/60">/hour</span>
             </div>
-            <p className="text-sm text-white/40 mb-8">Billed in 1-hour increments</p>
+            <p className="text-sm text-white/40 mb-8">No subscription or retainer required</p>
 
             <ul className="space-y-3 text-left mb-8">
               {[
