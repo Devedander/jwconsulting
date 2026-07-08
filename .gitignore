@@ -10,3 +10,10 @@ public/flyer.html
 dist
 .tanstack
 src/routeTree.gen.ts
+
+# Local-only working notes, not part of the site
+drafts
+marketing
+
+# Local tool config
+.claude

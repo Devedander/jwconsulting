@@ -56,6 +56,12 @@ export function Header() {
             </a>
           ))}
           <Link
+            to="/about"
+            className="text-sm font-medium text-white/70 hover:text-white transition-colors no-underline"
+          >
+            About
+          </Link>
+          <Link
             to="/faq"
             className="text-sm font-medium text-white/70 hover:text-white transition-colors no-underline"
           >
@@ -127,6 +133,13 @@ export function Header() {
               {label}
             </a>
           ))}
+          <Link
+            to="/about"
+            className="text-white/80 hover:text-white text-base font-medium no-underline"
+            onClick={() => setOpen(false)}
+          >
+            About
+          </Link>
           <Link
             to="/faq"
             className="text-white/80 hover:text-white text-base font-medium no-underline"

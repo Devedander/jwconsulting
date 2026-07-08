@@ -30,6 +30,7 @@ export function SiteFooter() {
         <div className="flex gap-6 text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
           <a href="#services" className="hover:text-white/70 transition-colors no-underline">Services</a>
           <a href="#pricing"  className="hover:text-white/70 transition-colors no-underline">Pricing</a>
+          <Link to="/about"   className="hover:text-white/70 transition-colors no-underline">About</Link>
           <Link to="/faq"     className="hover:text-white/70 transition-colors no-underline">FAQ</Link>
           <a href="#contact"  className="hover:text-white/70 transition-colors no-underline">Contact</a>
         </div>
