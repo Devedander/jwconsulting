@@ -15,7 +15,8 @@ export const Route = createFileRoute('/reviews')({
 })
 
 const GOOGLE_REVIEW_URL = 'https://g.page/r/CfK20x2HSjKyEBM/review'
-const YELP_REVIEW_URL = 'https://www.yelp.com/biz/jw-consulting-services-kenwood-2'
+const YELP_REVIEW_URL =
+  'https://www.yelp.com/writeareview/biz/YJQdgW1UvZnL_qLywF3_jg?return_url=%2Fbiz%2FYJQdgW1UvZnL_qLywF3_jg&review_origin=biz-details-war-button'
 const FEEDBACK_EMAIL = 'john@johnwangcs.com'
 
 function ReviewsPage() {
@@ -24,13 +25,6 @@ function ReviewsPage() {
 
   const handleSelect = (stars: number) => {
     setRating(stars)
-    if (stars === 5) {
-      // Open Google review in a new tab immediately (must happen synchronously
-      // in the click handler so browsers don't treat it as a blocked popup).
-      // This tab stays on /reviews so the Yelp fallback and homepage link
-      // are still visible if the person closes the Google tab.
-      window.open(GOOGLE_REVIEW_URL, '_blank', 'noopener,noreferrer')
-    }
   }
 
   const mailtoHref = `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(
@@ -48,38 +42,19 @@ function ReviewsPage() {
           >
             How Did We Do?
           </h1>
-          {!(rating > 0 && rating < 5) && (
+          {rating === 0 && (
             <p className="section-subtitle mx-auto mb-10">
               Your experience matters to me - tap a star to let me know how things went.
             </p>
           )}
 
-          {rating > 0 && rating < 5 ? (
-            <div
-              className="rounded-2xl p-6 animate-fade-in text-left"
-              style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
-            >
-              <p className="font-semibold mb-2" style={{ color: 'var(--navy)' }}>
-                I want to hear from you.
-              </p>
-              <p className="text-sm mb-5" style={{ color: 'var(--warm-gray)' }}>
-                I&apos;m sorry your experience wasn&apos;t a 5-star one. Please let me know what
-                happened so I can make it right - every bit of feedback helps me improve.
-              </p>
-              <div className="flex justify-center">
-                <a href={mailtoHref} className="btn-outline">
-                  <Mail size={15} />
-                  Email Your Feedback
-                </a>
-              </div>
-            </div>
-          ) : (
+          {rating === 0 && (
             <div
               className="flex items-center justify-center gap-2 mb-10"
               onMouseLeave={() => setHovered(0)}
             >
               {[1, 2, 3, 4, 5].map((n) => {
-                const filled = (hovered || rating) >= n
+                const filled = hovered >= n
                 return (
                   <button
                     key={n}
@@ -102,45 +77,71 @@ function ReviewsPage() {
             </div>
           )}
 
-          {rating === 5 && (
+          {rating > 0 && rating < 4 && (
             <div
-              className="rounded-2xl p-6 animate-fade-in"
+              className="rounded-2xl p-6 mb-6 animate-fade-in text-left"
+              style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
+            >
+              <p className="font-semibold mb-2" style={{ color: 'var(--navy)' }}>
+                I want to hear from you.
+              </p>
+              <p className="text-sm mb-5" style={{ color: 'var(--warm-gray)' }}>
+                I&apos;m sorry your experience wasn&apos;t a great one. Please let me know what
+                happened so I can make it right - every bit of feedback helps me improve.
+              </p>
+              <div className="flex justify-center">
+                <a href={mailtoHref} className="btn-outline">
+                  <Mail size={15} />
+                  Email Your Feedback
+                </a>
+              </div>
+            </div>
+          )}
+
+          {rating >= 4 && (
+            <div
+              className="rounded-2xl p-6 mb-6 animate-fade-in"
               style={{ background: 'white', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow)' }}
             >
               <p className="font-semibold mb-1" style={{ color: 'var(--navy)' }}>
                 Thank you!
               </p>
-              <p className="text-sm mb-4" style={{ color: 'var(--warm-gray)' }}>
-                Taking you to Google to share your review&hellip;
+              <p className="text-sm" style={{ color: 'var(--warm-gray)' }}>
+                I appreciate a review on either Google or Yelp &mdash; and if you have a
+                minute to copy and paste the same review to both, that&apos;s even more helpful.
               </p>
-              <a
-                href={GOOGLE_REVIEW_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block transition-opacity hover:opacity-80"
-              >
-                <img
-                  src="/images/google-review-badge.png"
-                  alt="Leave a review on Google"
-                  style={{ width: 200, height: 'auto', margin: '0 auto' }}
-                />
-              </a>
-              <p className="text-xs mt-4 mb-2" style={{ color: 'var(--warm-gray)' }}>
-                Don&apos;t have a Google account?
-              </p>
-              <a
-                href={YELP_REVIEW_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block transition-opacity hover:opacity-80"
-              >
-                <img
-                  src="/images/yelp-review-badge.jpg"
-                  alt="Leave a review on Yelp"
-                  style={{ width: 200, height: 'auto', margin: '0 auto' }}
-                />
-              </a>
-              <p className="text-xs mt-4" style={{ color: 'var(--warm-gray)' }}>
+            </div>
+          )}
+
+          {rating > 0 && (
+            <div className="animate-fade-in">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+                <a
+                  href={GOOGLE_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block transition-opacity hover:opacity-80"
+                >
+                  <img
+                    src="/images/google-review-badge.png"
+                    alt="Leave a review on Google"
+                    style={{ width: 200, height: 'auto' }}
+                  />
+                </a>
+                <a
+                  href={YELP_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block transition-opacity hover:opacity-80"
+                >
+                  <img
+                    src="/images/yelp-review-badge.jpg"
+                    alt="Leave a review on Yelp"
+                    style={{ width: 200, height: 'auto' }}
+                  />
+                </a>
+              </div>
+              <p className="text-xs mt-6" style={{ color: 'var(--warm-gray)' }}>
                 Or{' '}
                 <Link to="/" style={{ color: 'var(--warm-gray)', textDecoration: 'underline' }}>
                   click here to go back to jwconsulting.com
