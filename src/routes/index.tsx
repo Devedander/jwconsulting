@@ -55,7 +55,11 @@ export const Route = createFileRoute('/')({
             ratingValue: '5.0',
             reviewCount: '5',
           },
-          sameAs: ['https://g.page/r/CfK20x2HSjKyEBM/review'],
+          sameAs: [
+            'https://g.page/r/CfK20x2HSjKyEBM/review',
+            'https://www.linkedin.com/in/johnwangcs',
+            'https://www.yelp.com/biz/jw-consulting-services-kenwood-2',
+          ],
           makesOffer: [
             'Virus & Malware Removal',
             'Computer Speed & Performance Repair',
@@ -277,7 +281,7 @@ function ServicesSection() {
             <div className="rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '4 / 3' }}>
               <img
                 src={`${import.meta.env.BASE_URL}images/john-headshot.jpg`}
-                alt="John Wang, owner of JW Consulting Services"
+                alt="John Wang, owner of JW Consulting Services, providing concierge IT support to businesses, individuals and senior citizens in Sonoma County and surrounding areas"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 20%' }}
               />
