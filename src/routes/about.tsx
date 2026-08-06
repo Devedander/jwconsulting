@@ -42,7 +42,7 @@ export const Route = createFileRoute('/about')({
 
 function AboutPage() {
   return (
-    <div data-reveal-repeat className="min-h-screen" style={{ background: 'var(--cream)', color: 'var(--navy)' }}>
+    <div className="min-h-screen" style={{ background: 'var(--cream)', color: 'var(--navy)' }}>
       <HeroSection />
       <OriginStorySection />
       <JourneySection />
