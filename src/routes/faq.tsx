@@ -112,6 +112,7 @@ function FAQPage() {
     <div className="min-h-screen" style={{ background: 'var(--cream)' }}>
       {/* Header */}
       <div
+        data-reveal-group
         className="py-16 px-6"
         style={{ background: 'var(--navy)' }}
       >
@@ -146,7 +147,7 @@ function FAQPage() {
       </div>
 
       {/* FAQ content */}
-      <div className="py-16 px-6">
+      <div data-reveal-group className="py-16 px-6">
         <div className="max-w-3xl mx-auto space-y-14">
           {categories.map((cat) => (
             <div key={cat}>

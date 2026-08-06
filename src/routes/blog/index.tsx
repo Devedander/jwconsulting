@@ -35,7 +35,7 @@ function BlogIndexPage() {
   return (
     <div className="min-h-screen" style={{ background: 'var(--cream)' }}>
       {/* Header */}
-      <div className="py-16 px-6" style={{ background: 'var(--navy)' }}>
+      <div data-reveal-group className="py-16 px-6" style={{ background: 'var(--navy)' }}>
         <div className="max-w-3xl mx-auto">
           <Link
             to="/"
@@ -64,7 +64,7 @@ function BlogIndexPage() {
       </div>
 
       {/* Post grid */}
-      <div className="py-16 px-6">
+      <div data-reveal-group className="py-16 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
           {blogPosts.map((post) => (
             <Link
