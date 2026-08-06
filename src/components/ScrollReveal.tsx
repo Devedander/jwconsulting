@@ -12,9 +12,13 @@ export function ScrollReveal() {
       : new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting) {
+              const repeats = entry.target.closest('[data-reveal-repeat]') !== null
+
+              if (entry.intersectionRatio >= 0.12) {
                 entry.target.classList.add('is-visible')
-                revealObserver?.unobserve(entry.target)
+                if (!repeats) revealObserver?.unobserve(entry.target)
+              } else if (repeats && !entry.isIntersecting) {
+                entry.target.classList.remove('is-visible')
               }
             })
           },
