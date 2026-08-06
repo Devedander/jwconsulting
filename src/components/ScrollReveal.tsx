@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const REVEAL_SELECTOR = 'section:not(:first-of-type) > div:first-child > *, [data-reveal-group] > *'
+const REVEAL_SELECTOR = 'section > div:first-child > *, [data-reveal-group] > *'
 
 export function ScrollReveal() {
   useEffect(() => {
