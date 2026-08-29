@@ -36,7 +36,7 @@ export function SiteFooter() {
         </div>
 
         <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-          &copy; {new Date().getFullYear()} JW Consulting Services
+          &copy; {new Date().getFullYear()} JW Consulting Services · Licensed &amp; Insured
         </p>
       </div>
 

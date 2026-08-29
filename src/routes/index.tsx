@@ -16,6 +16,7 @@ import {
   ChevronRight,
   Star,
   ShieldCheck,
+  Award,
   Clock,
   Users,
   Headphones,
@@ -173,6 +174,7 @@ function HeroSection() {
           >
             {[
               { Icon: ShieldCheck, text: 'Trusted & Local' },
+              { Icon: Award,       text: 'Licensed & Insured' },
               { Icon: Clock,       text: 'Responsive Service' },
               { Icon: Users,       text: 'People-First' },
             ].map(({ Icon, text }) => (

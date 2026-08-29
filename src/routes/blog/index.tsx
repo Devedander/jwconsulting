@@ -8,7 +8,7 @@ export const Route = createFileRoute('/blog/')({
     const title = 'Tips & Guides - JW Consulting Services'
     const description =
       'Free, jargon-free tips on avoiding tech support scams, keeping your computer running well, and getting the most out of your devices - from JW Consulting Services in Sonoma County.'
-    const url = 'https://johnwangcs.com/blog'
+    const url = 'https://johnwangcs.com/blog/'
     return {
       meta: [
         { title },

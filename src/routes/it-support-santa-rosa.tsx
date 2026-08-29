@@ -9,7 +9,7 @@ export const Route = createFileRoute('/it-support-santa-rosa')({
     const title = 'IT Support & Computer Repair in Santa Rosa, CA - JW Consulting Services'
     const description =
       'Friendly, local IT support in Santa Rosa - virus removal, slow computer fixes, Wi-Fi troubleshooting, and custom-quote managed IT for small businesses. Call (707) 874-8324.'
-    const url = 'https://johnwangcs.com/it-support-santa-rosa'
+    const url = 'https://johnwangcs.com/it-support-santa-rosa/'
     return {
       meta: [
         { title },

@@ -9,7 +9,7 @@ export const Route = createFileRoute('/it-support-healdsburg')({
     const title = 'IT Support & Computer Repair in Healdsburg, CA - JW Consulting Services'
     const description =
       'Reliable, friendly IT support in Healdsburg - computer repair, Wi-Fi troubleshooting, email security, and managed IT for small businesses. Call (707) 874-8324.'
-    const url = 'https://johnwangcs.com/it-support-healdsburg'
+    const url = 'https://johnwangcs.com/it-support-healdsburg/'
     return {
       meta: [
         { title },

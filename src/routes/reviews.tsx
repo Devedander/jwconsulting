@@ -9,7 +9,7 @@ export const Route = createFileRoute('/reviews')({
       { title: 'How Did We Do? - JW Consulting Services' },
       { name: 'robots', content: 'noindex, nofollow' },
     ],
-    links: [{ rel: 'canonical', href: 'https://johnwangcs.com/reviews' }],
+    links: [{ rel: 'canonical', href: 'https://johnwangcs.com/reviews/' }],
   }),
   component: ReviewsPage,
 })

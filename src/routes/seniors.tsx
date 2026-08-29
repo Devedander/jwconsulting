@@ -26,7 +26,7 @@ export const Route = createFileRoute('/seniors')({
     const title = 'Tech Support for Seniors in Santa Rosa & Sonoma County - JW Consulting Services'
     const description =
       'Patient, in-home tech help for seniors in Santa Rosa, Oakmont, Petaluma, Sebastopol, Healdsburg, Windsor and Sonoma County. Real fixes for viruses, hacked email, slow computers, Wi-Fi, printers and scams - not just lessons.'
-    const url = 'https://johnwangcs.com/seniors'
+    const url = 'https://johnwangcs.com/seniors/'
     return {
       meta: [
         { title },

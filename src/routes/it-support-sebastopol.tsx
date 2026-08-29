@@ -9,7 +9,7 @@ export const Route = createFileRoute('/it-support-sebastopol')({
     const title = 'IT Support & Computer Repair in Sebastopol, CA - JW Consulting Services'
     const description =
       'Friendly tech support in Sebastopol and West County - computer repair, Wi-Fi help, email security, and managed IT for small businesses. Call (707) 874-8324.'
-    const url = 'https://johnwangcs.com/it-support-sebastopol'
+    const url = 'https://johnwangcs.com/it-support-sebastopol/'
     return {
       meta: [
         { title },

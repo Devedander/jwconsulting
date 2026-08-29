@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header
       style={{ background: 'var(--navy)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
-      className="sticky top-0 z-50"
+      className="site-header sticky top-0 z-50"
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
@@ -104,20 +104,27 @@ export function Header() {
             Call Now
           </a>
           <button
-            className="text-white p-1"
+            className="mobile-menu-toggle text-white p-1"
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
-            {open ? <X size={24} /> : <Menu size={24} />}
+            <Menu className={open ? 'menu-icon menu-icon-hidden' : 'menu-icon'} size={24} />
+            <X className={open ? 'menu-icon' : 'menu-icon menu-icon-hidden'} size={24} />
           </button>
         </div>
       </nav>
 
       {/* Mobile menu */}
-      {open && (
+      <div
+        id="mobile-navigation"
+        className={`mobile-menu md:hidden ${open ? 'mobile-menu-open' : ''}`}
+        aria-hidden={!open}
+      >
         <div
           style={{ background: 'var(--navy)', borderTop: '1px solid rgba(255,255,255,0.08)' }}
-          className="md:hidden px-6 py-5 flex flex-col gap-4"
+          className="mobile-menu-content px-6 py-5 flex flex-col gap-4"
         >
           {[
             { href: `${import.meta.env.BASE_URL}#services`, label: 'Services' },
@@ -171,7 +178,7 @@ export function Header() {
             (707) 874-TECH (8324)
           </a>
         </div>
-      )}
+      </div>
     </header>
   )
 }

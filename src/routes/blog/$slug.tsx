@@ -11,7 +11,7 @@ export const Route = createFileRoute('/blog/$slug')({
   },
   head: ({ loaderData }) => {
     if (!loaderData) return {}
-    const url = `https://johnwangcs.com/blog/${loaderData.slug}`
+    const url = `https://johnwangcs.com/blog/${loaderData.slug}/`
     return {
       meta: [
         { title: `${loaderData.title} - JW Consulting Services` },

@@ -9,7 +9,7 @@ export const Route = createFileRoute('/it-support-petaluma')({
     const title = 'IT Support & Computer Repair in Petaluma, CA - JW Consulting Services'
     const description =
       'Local, patient tech support in Petaluma - computer repair, Wi-Fi fixes, email security, and custom-quote managed IT for small businesses. Call (707) 874-8324.'
-    const url = 'https://johnwangcs.com/it-support-petaluma'
+    const url = 'https://johnwangcs.com/it-support-petaluma/'
     return {
       meta: [
         { title },

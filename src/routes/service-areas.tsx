@@ -16,7 +16,7 @@ export const Route = createFileRoute('/service-areas')({
     const title = 'Service Areas - JW Consulting Services'
     const description =
       'JW Consulting Services provides in-person IT support throughout Santa Rosa, Petaluma, Sebastopol, Healdsburg, Windsor and the surrounding Sonoma County area, plus remote support worldwide.'
-    const url = 'https://johnwangcs.com/service-areas'
+    const url = 'https://johnwangcs.com/service-areas/'
     return {
       meta: [
         { title },

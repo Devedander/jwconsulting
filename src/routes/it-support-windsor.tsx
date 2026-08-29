@@ -9,7 +9,7 @@ export const Route = createFileRoute('/it-support-windsor')({
     const title = 'IT Support & Computer Repair in Windsor, CA - JW Consulting Services'
     const description =
       'Friendly, patient IT support in Windsor, CA - computer repair, Wi-Fi help, email security, and managed IT for small businesses. Call (707) 874-8324.'
-    const url = 'https://johnwangcs.com/it-support-windsor'
+    const url = 'https://johnwangcs.com/it-support-windsor/'
     return {
       meta: [
         { title },

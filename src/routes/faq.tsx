@@ -7,7 +7,7 @@ export const Route = createFileRoute('/faq')({
     const title = 'Frequently Asked Questions - JW Consulting Services'
     const description =
       'Answers to common questions about business managed IT support, concierge tech help for individuals and seniors, pricing, devices supported, and service areas in Sonoma County.'
-    const url = 'https://johnwangcs.com/faq'
+    const url = 'https://johnwangcs.com/faq/'
     return {
       meta: [
         { title },
