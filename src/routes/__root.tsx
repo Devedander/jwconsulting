@@ -64,6 +64,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-RQWB0BGW3R');`,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener('click', function(e) { const link = e.target.closest('a'); if (!link) return; const href = link.getAttribute('href') || ''; if (href.startsWith('tel:')) gtag('event', 'phone_click'); if (href.startsWith('mailto:')) gtag('event', 'email_click'); });`,
+          }}
+        />
       </head>
       <body>
         <Header />
